@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, j;
+    char c1, c2;
+
+    printf("Input n: ");
+    scanf("%d", &n);
+    printf("Input c1: ");
+    scanf(" %c", &c1);
+    printf("Input c2: ");
+    scanf(" %c", &c2);
+
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n; j++) {
+            if (i % 2 == 1)
+            printf("%c ", c1);
+            else
+            printf("%c ", c2);
+        }
+        printf("\n");
+    }
+    return 0;
+}

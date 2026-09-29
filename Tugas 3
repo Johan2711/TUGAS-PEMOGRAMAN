@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int rahasia, tebak;
+    srand(time(NULL));
+    rahasia = rand() % 20 + 1;
+
+    while (1) {
+        printf("Tebak angka (1-20, 99 untuk menyerah): ");
+        scanf("%d", &tebak);
+
+        if (tebak == 99) {
+            printf("Anda menyerah\n");
+            break;
+        } else if (tebak < rahasia) {
+            printf("lebih tinggi\n");
+        } else if (tebak > rahasia) {
+            printf("lebih rendah\n");
+        } else {
+            printf("cocok\n");
+            break;
+        }
+    }
+    return 0;
+}

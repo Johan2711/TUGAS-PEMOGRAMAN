@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int pinBenar = 123456;
+    int pin, salah = 0;
+
+    while (salah < 3) {
+        printf("Masukkan PIN: ");
+        scanf("%d", &pin);
+
+        if (pin == pinBenar) {
+            printf("PIN benar\n");
+            return 0;
+        }
+        salah++;
+        printf("PIN salah\n");
+    }
+    printf("Kartu Anda Diblokir\n");
+    return 0;
+}
